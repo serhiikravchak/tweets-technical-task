@@ -112,11 +112,12 @@ export const Button = styled.button`
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
-  /* identical to box height */
-
   text-transform: uppercase;
-
-  /* Landing/button text color */
-
   color: #373737;
+  :hover,
+  :focus {
+    background-color: #5736a3;
+    color:#ebd8ff;
+    border: none;
+    }
 `;

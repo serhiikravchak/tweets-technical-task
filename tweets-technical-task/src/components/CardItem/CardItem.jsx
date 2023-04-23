@@ -8,12 +8,13 @@ import {
   AvatarBorder,
   StatisticItem,
   StatisticList,
-  Button
+  Button,
 } from "./CardItem.styled";
 import logo from "../../images/logo.svg";
 import image from "../../images/image.png";
 
-export const CardItem = () => {
+export const CardItem = ({user}) => {
+    const {name,tweets,followers,avatar} = user;
   return (
     <Item>
       <Card>
@@ -21,11 +22,11 @@ export const CardItem = () => {
         <CardImage src={image} alt="bg-image" />
         <Line />
         <AvatarBorder>
-          <Avatar src="" alt="" />
+          <Avatar src={avatar} alt={name} />
         </AvatarBorder>
         <StatisticList>
-          <StatisticItem>777 Tweets</StatisticItem>
-          <StatisticItem>777 Followers</StatisticItem>
+          <StatisticItem>{tweets} Tweets</StatisticItem>
+          <StatisticItem>{followers} Followers</StatisticItem>
         </StatisticList>
         <Button type="button">follow</Button>
       </Card>

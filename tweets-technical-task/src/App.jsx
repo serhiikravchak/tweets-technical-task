@@ -1,5 +1,5 @@
 import { CardItem } from './components/CardItem/CardItem'
-
+import { CardList } from './components/CardList/CardList'
 import './App.css'
 
 function App() {
@@ -7,9 +7,9 @@ function App() {
 
   return (
     <>
-     <ul>
+     <CardList>
       <CardItem/>
-     </ul>
+     </CardList>
     </>
   )
 }
