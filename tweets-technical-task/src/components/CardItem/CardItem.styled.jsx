@@ -4,10 +4,6 @@ export const Item = styled.li``;
 
 export const Card = styled.div`
   position: relative;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end; */
   z-index: 1;
   width: 380px;
   height: 460px;

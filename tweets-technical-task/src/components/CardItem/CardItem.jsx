@@ -13,8 +13,12 @@ import {
 import logo from "../../images/logo.svg";
 import image from "../../images/image.png";
 
-export const CardItem = ({user}) => {
-    const {name,tweets,followers,avatar} = user;
+
+export const CardItem = ({ user, toggleFollowing, isFollowing }) => {
+  const { name, tweets, followers, avatar } = user;
+  const buttonText = isFollowing ? "Following" : "Follow";
+ 
+
   return (
     <Item>
       <Card>
@@ -28,7 +32,9 @@ export const CardItem = ({user}) => {
           <StatisticItem>{tweets} Tweets</StatisticItem>
           <StatisticItem>{followers} Followers</StatisticItem>
         </StatisticList>
-        <Button type="button">follow</Button>
+        <Button type="button" onClick={toggleFollowing}>
+          {buttonText}
+        </Button>
       </Card>
     </Item>
   );
